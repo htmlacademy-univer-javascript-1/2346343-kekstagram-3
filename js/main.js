@@ -10,6 +10,10 @@ function getRandom (from, until) {
   return Math.floor(Math.random() * (until - from + 1)) + from;
 }
 
+const RANDOM = getRandom(0, 27);
+
 function checkStringSize  (string, maxSize) {
-  string.length <= maxSize;
+  return string.length <= maxSize;
 }
+
+const TEST_CSHECK_STRING_SIZE = checkStringSize('baobab', 6);
