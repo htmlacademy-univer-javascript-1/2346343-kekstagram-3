@@ -7,10 +7,10 @@ function getRandom (from, until) {
   }
   from = Math.ceil(from);
   until = Math.floor(until);
-  Math.floor(Math.random() * (until - from + 1)) + from;
+  return Math.floor(Math.random() * (until - from + 1)) + from;
 }
 
 
 function checkStringSize  (string, maxSize) {
-   string.length <= maxSize;
+  return string.length <= maxSize;
 }
