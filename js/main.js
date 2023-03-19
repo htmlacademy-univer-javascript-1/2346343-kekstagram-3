@@ -1,4 +1,4 @@
-function getRandom (from, until) {
+const getRandom = function (from, until)  {
   if (from < 0) {
     from = 0;
   }
@@ -9,8 +9,10 @@ function getRandom (from, until) {
   until = Math.floor(until);
   return Math.floor(Math.random() * (until - from + 1)) + from;
 }
+getRandom = (1, 27);
 
-
-function checkStringSize  (string, maxSize) {
+const checkStringSize = function(string, maxSize) {
   return string.length <= maxSize;
 }
+
+checkStringSize('baobab', 6);
