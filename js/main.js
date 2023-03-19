@@ -8,11 +8,11 @@ const getRandom = function (from, until)  {
   from = Math.ceil(from);
   until = Math.floor(until);
   return Math.floor(Math.random() * (until - from + 1)) + from;
-}
-getRandom = (1, 27);
+};
+getRandom(1, 27);
 
 const checkStringSize = function(string, maxSize) {
   return string.length <= maxSize;
-}
+};
 
 checkStringSize('baobab', 6);
