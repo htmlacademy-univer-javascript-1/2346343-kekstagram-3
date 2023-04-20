@@ -33,4 +33,4 @@ function getPhotoData() {
   return photoData;
 }
 
-photo = getPhotoData();
+getPhotoData();
