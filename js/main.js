@@ -19,16 +19,18 @@ checkStringSize('baobab', 6);
 const photoData = [];
 
 const createUser = (id) => ({
-    id: id,
-    url: `photos/${id}.jpg`,
-    description: `photo number ${id}`,
-    likes: getRandom(15, 200),
-    comment: getRandom(0, 200)
+  id: id,
+  url: `photos/${id}.jpg`,
+  description: `photo number ${id}`,
+  likes: getRandom(15, 200),
+  comment: getRandom(0, 200)
 });
 
 function getPhotoData() {
-    for (let i = 1; i <= 25; i++) {
-        photoData.push(createUser(i));
-    }
-    return photoData;
+  for (let i = 1; i <= 25; i++) {
+    photoData.push(createUser(i));
+  }
+  return photoData;
 }
+
+photo = getPhotoData();
