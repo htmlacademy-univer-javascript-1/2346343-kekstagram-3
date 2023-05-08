@@ -14,9 +14,7 @@ const checkStringSize = function(string, maxSize) {
   return string.length <= maxSize;
 };
 
-export function isEscapeKey(evt) {
-  return evt.key === 'Escape';
-}
+
 
 const isEscKey = (evt) => evt.key === 'Escape';
 
@@ -35,5 +33,27 @@ const numberDeclination = (num, nominative, genitiveSingular, genitivePlural) =>
   return genitivePlural;
 };
 
-export { isEscKey, numberDeclination };
+const isEscapeKey = (evt) => evt.keyCode === 27;
+
+const checkForRepeats = (list) => {
+  const containerForСomparison = {};
+  for (const element of list) {
+    if (containerForСomparison[element]) {
+      return true;
+    }
+    containerForСomparison[element] = 1;
+  }
+  return false;
+};
+
+const debounce = (callback, timeoutDelay = 500) => {
+  let timeoutId;
+  return (...rest) => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => callback.apply(this, rest), timeoutDelay);
+  };
+};
+
+export { isEscKey, numberDeclination, isEscapeKey, checkForRepeats, debounce };
+
 checkStringSize('baobab', 6);
