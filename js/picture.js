@@ -20,7 +20,7 @@ const appendNewComments = ({ avatar, name, message }) => {
   newComment.querySelector('.social__picture').alt = name;
   newComment.querySelector('.social__text').textContent = message;
   return newComment;
-}
+};
 
 function updateCommentsCount(value) {
   shownCommentsCount.textContent = value;

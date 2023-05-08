@@ -14,10 +14,7 @@ const checkStringSize = function(string, maxSize) {
   return string.length <= maxSize;
 };
 
-
-
 const isEscKey = (evt) => evt.key === 'Escape';
-
 
 const numberDeclination = (num, nominative, genitiveSingular, genitivePlural) => {
   const hundredths = num % 100;

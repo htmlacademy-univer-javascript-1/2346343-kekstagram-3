@@ -193,7 +193,7 @@ const showSuccessForm = () => {
   body.appendChild(successFormTemplate);
   document.addEventListener('click', outOfFormHandler);
   document.addEventListener('keydown', successKeydownHandler);
-}
+};
 
 const showErrorForm = (message) => {
   editingWindowElement.classList.add('hidden');
