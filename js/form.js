@@ -161,4 +161,3 @@ const initUploadForm = () => {
 };
 
 export { initUploadForm };
-strSizeCheck
