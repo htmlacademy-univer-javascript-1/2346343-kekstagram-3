@@ -1,6 +1,15 @@
-import { getDataFromServer } from './api.js';
-import { renderPhotos, filterBtnsAddEvent, showAlert, TIMEOUT_DELAY } from './rendering-photos.js';
-import { debounce} from './util.js';
+import {
+  getDataFromServer
+} from './api.js';
+import {
+  renderPhotos,
+  filterBtnsAddEvent,
+  showAlert,
+  TIMEOUT_DELAY
+} from './rendering-photos.js';
+import {
+  debounce
+} from './util.js';
 
 getDataFromServer(
   (photos) => {

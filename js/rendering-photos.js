@@ -1,5 +1,5 @@
 import { renderPhotosList } from './picture.js';
-import { getRandomInteger} from './util.js';
+import { getRandom} from './util.js';
 import { closeEditingWindow,  setUserFormSubmit  } from './form.js';
 
 const ALERT_SHOW_TIME = 5000;
@@ -22,7 +22,7 @@ const filteringPhotos = (photos) => {
     case 'filter-random':
       temporaryPhotoStorage = photos.slice();
       for (let i = 0; i < RANDOM_PHOTOS_COUNT && temporaryPhotoStorage.length > 0; i++) {
-        const randomPhotoIndex = getRandomInteger(0, temporaryPhotoStorage.length - 1);
+        const randomPhotoIndex = getRandom(0, temporaryPhotoStorage.length - 1);
         photosForRendering.push(temporaryPhotoStorage[randomPhotoIndex]);
         temporaryPhotoStorage.splice(randomPhotoIndex, 1);
       }
