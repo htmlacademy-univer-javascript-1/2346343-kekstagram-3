@@ -1,5 +1,7 @@
 import { checkStringSize, isEscapeKey } from './util.js';
 import { MAX_STRING_LENGTH, MAX_HASHTAG_COUNT, MAX_HASHTAG_LENGTH, ErrorMessage } from './templates.js';
+import { setDefaultScale } from './scale.js';
+import { setDefaultEffect } from './effects.js';
 
 const body = document.querySelector('body');
 const submitBtn = document.querySelector('.img-upload__submit');
@@ -160,4 +162,15 @@ const initUploadForm = () => {
   validateForm();
 };
 
-export { initUploadForm };
+const onFileInput = () => {
+  editImg.classList.remove('hidden');
+  document.body.classList.add('modal-open');
+  closeBtn.addEventListener('click', closeUploadPopup);
+  document.addEventListener('keydown', onBtnEscKeydown);
+  form.addEventListener('submit', adjustBtn);
+
+  setDefaultScale();
+  setDefaultEffect();
+};
+
+export { initUploadForm, onFileInput };
