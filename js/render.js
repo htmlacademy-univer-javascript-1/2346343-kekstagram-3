@@ -18,3 +18,4 @@ export const render = () => {
   }
   pictures.append(patternUserFragment);
 };
+//Задание 7 часть 2
