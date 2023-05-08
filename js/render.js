@@ -1,5 +1,6 @@
 import {getPhotoData} from './data.js';
 
+
 const photoData = getPhotoData();
 
 const userTemp = document.querySelector('#picture').content.querySelector('.picture');

@@ -14,4 +14,6 @@ const checkStringSize = function(string, maxSize) {
   return string.length <= maxSize;
 };
 
-checkStringSize('baobab', 6);
+export function isEscapeKey(evt) {
+  return evt.key === 'Escape';
+};
