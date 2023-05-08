@@ -167,7 +167,7 @@ const onFileInput = () => {
   document.body.classList.add('modal-open');
   closeBtn.addEventListener('click', closeUploadPopup);
   document.addEventListener('keydown', onBtnEscKeydown);
-  form.addEventListener('submit', adjustBtn);
+  form.addEventListener('submit');
 
   setDefaultScale();
   setDefaultEffect();
