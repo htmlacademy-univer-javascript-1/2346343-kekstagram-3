@@ -31,7 +31,7 @@ const onDocumentEscKeyDown = (evt) => {
     onCloseClick();
     document.removeEventListener('keydown', onDocumentEscKeyDown);
   }
-}
+};
 
 const onUploadingFieldInput = () => {
   editImg.classList.remove('hidden');
